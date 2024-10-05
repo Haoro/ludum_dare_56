@@ -18,7 +18,7 @@
                     "name": "RotateRight",
                     "type": "Button",
                     "id": "d09bc6e4-859c-4038-ba9b-25e4dcc59368",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
