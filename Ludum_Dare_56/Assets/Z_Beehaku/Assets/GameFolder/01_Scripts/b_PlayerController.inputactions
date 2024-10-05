@@ -15,19 +15,10 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "RotateRight",
+                    "name": "Pause",
                     "type": "Button",
-                    "id": "d09bc6e4-859c-4038-ba9b-25e4dcc59368",
+                    "id": "06b45bd8-cfe7-4a83-919f-293c7806dc26",
                     "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RotateLeft",
-                    "type": "Button",
-                    "id": "d079196f-bf78-4ae7-b8d1-2075d132fb68",
-                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -102,23 +93,12 @@
                 },
                 {
                     "name": "",
-                    "id": "5fa6ad8b-9a8a-48dc-b7b6-3912db997b0c",
-                    "path": "<Keyboard>/e",
+                    "id": "b87fcb55-d510-482d-b5ba-7047e131807e",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "RotateRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bbb3ed4c-4c8d-4fb1-bdda-6af7c9858747",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RotateLeft",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

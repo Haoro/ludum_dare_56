@@ -11,16 +11,21 @@ public class GameManager : MonoBehaviour
 
         public Canvas startMenu;
 
-        private void Awake()
+     
+
+    private void Awake()
     {
         playerControls = new B_PlayerController();
+        playerControls.PlayerBaseController.Pause.performed += ctx => Pause();
+        Debug.Log("Awake");
     }
+
+   
 
 
     // Start is called before the first frame update
     void Start()
     {
-                playerControls.PlayerBaseController.Pause.performed += ctx => Pause();
                 Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
