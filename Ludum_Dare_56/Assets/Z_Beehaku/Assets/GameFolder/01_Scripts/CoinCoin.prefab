@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2481422593109844535}
   m_Layer: 0
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: CoinCoin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,7 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c636264af502744a7fbefb4b430c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   followSpeed: 3
   isFollowing: 0
 --- !u!23 &2481422593109844532
@@ -369,7 +368,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2481422593619149375}
-  - component: {fileID: 2481422593619149374}
   m_Layer: 0
   m_Name: CoinCoin
   m_TagString: Untagged
@@ -393,21 +391,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2481422593619149374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2481422593619149368}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5b33702243d6248acd46b912ae2b7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  followSpeed: 3
-  isFollowing: 0
 --- !u!1 &2481422593991612097
 GameObject:
   m_ObjectHideFlags: 0
