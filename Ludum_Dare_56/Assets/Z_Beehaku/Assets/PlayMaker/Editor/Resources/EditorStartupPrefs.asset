@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   welcomeScreenVersion: '1.9.8 '
   playmakerVersion: 
-  showWelcomeScreen: 0
-  showUpgradeGuide: 1
+  showWelcomeScreen: 1
+  showUpgradeGuide: 0
   lastAutoUpdateSignature: 2022.3.49f1__C:/Users/remys/Unity/New_Ludum/Assets__0.0.0.0
   useLegacyNetworking: 0
