@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   welcomeScreenVersion: '1.9.8 '
   playmakerVersion: 
-  showWelcomeScreen: 1
+  showWelcomeScreen: 0
   showUpgradeGuide: 0
   lastAutoUpdateSignature: 2022.3.49f1__C:/Users/Emilien/Desktop/Unity/Games/Ludum_Dare_56/ludum_dare_56/Ludum_Dare_56/Assets__0.0.0.0
   useLegacyNetworking: 0
