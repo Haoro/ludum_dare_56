@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 6663017650722886230}
   - component: {fileID: 7503565461631865900}
   - component: {fileID: 4844455421729796314}
+  - component: {fileID: 7899207693172315120}
   m_Layer: 0
   m_Name: CoinCoin_Brain
   m_TagString: CoinCoin
@@ -279,8 +280,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 274
         y: 100
-        width: 196
-        height: 32
+        width: 194
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -294,25 +295,52 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: Trigger_With_Chien
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: SETUP_RUN_AWAY
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.SendEvent
         - HutongGames.PlayMaker.Actions.SetProperty
+        - HutongGames.PlayMaker.Actions.SendEvent
+        - HutongGames.PlayMaker.Actions.CallMethod
         - HutongGames.PlayMaker.Actions.SetMaterial
         - HutongGames.PlayMaker.Actions.CollisionEvent
+        - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.TriggerEvent
         customNames:
         - 
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000040000000600000009000000
-        actionHashCodes: 5e69bb045ac8520411ab5a02beb33100
+        - 
+        - 
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01010101010101
+        actionStartIndex: 0000000002000000060000000c0000000f000000150000001a000000
+        actionHashCodes: 5ac852045e69bb04ca51e90011ab5a02beb331009c5124009c512400
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
           name: Player_Object
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Most_Recent_Chien
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Most_Recent_Chien
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -334,6 +362,22 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 439418009820631233}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 821500481471472231}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -394,7 +438,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: 2
+            value: 2.5
           IntParameter:
             useVariable: 0
             name: 
@@ -510,8 +554,33 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: Stop
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: Player
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Chien
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Chien
         fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.AI.NavMeshAgent
+          value: {fileID: 4976126690011784470}
         - useVariable: 0
           name: 
           tooltip: 
@@ -519,7 +588,31 @@ MonoBehaviour:
           networkSync: 0
           typeName: 
           value: {fileID: 2100000, guid: 63b7d362548160544b8e484f9ee0faf4, type: 2}
-        fsmVarParams: []
+        fsmVarParams:
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
@@ -551,19 +644,28 @@ MonoBehaviour:
         stringParams:
         - WAITING_FOR_PLAYER
         - Player_Reach_CoinCoin
-        byteData: 000000000000
-        arrayParamSizes: 
-        arrayParamTypes: []
+        - Trigger_With_Chien
+        - Trigger_With_Chien
+        byteData: 00000000000000000000000000000000
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000170000000f00000001000000240000000100000014000000100000002000000014000000070000001200000017000000130000000f000000
+        paramDataType: 24000000010000001f000000170000000f0000000100000018000000120000000c00000027000000010000000100000014000000100000002000000014000000070000001200000017000000130000000f00000014000000070000001200000017000000130000001400000007000000120000001700000013000000
         paramName:
+        - targetProperty
+        - everyFrame
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        - targetProperty
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
         - everyFrame
+        - manualUI
         - gameObject
         - materialIndex
         - material
@@ -573,8 +675,18 @@ MonoBehaviour:
         - sendEvent
         - storeCollider
         - storeForce
-        paramDataPos: 000000000000000000000000000000000000000001000000000000000000000000000000010000000200000000000000010000000000000001000000
-        paramByteDataSize: 000000000000000000000000010000000000000001000000000000000000000000000000000000000400000000000000000000000000000000000000
+        - gameObject
+        - trigger
+        - collideTag
+        - sendEvent
+        - storeCollider
+        - gameObject
+        - trigger
+        - collideTag
+        - sendEvent
+        - storeCollider
+        paramDataPos: 0000000000000000000000000000000000000000010000000000000000000000000000000000000002000000030000000000000000000000010000000100000004000000010000000100000000000000010000000200000008000000020000000200000001000000030000000c000000030000000300000002000000
+        paramByteDataSize: 00000000010000000000000000000000000000000100000000000000000000000000000000000000010000000100000000000000000000000000000000000000040000000000000000000000000000000000000000000000040000000000000000000000000000000000000004000000000000000000000000000000
     - name: Follow_Player
       description: 
       colorIndex: 0
@@ -600,11 +712,13 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEvent
+        - HutongGames.PlayMaker.Actions.CallMethod
         - HutongGames.PlayMaker.Actions.SetProperty
         - HutongGames.PlayMaker.Actions.SetMaterial
         - HutongGames.PlayMaker.Actions.SetProperty
         - HutongGames.PlayMaker.Actions.GetPosition
         - HutongGames.PlayMaker.Actions.CallMethod
+        - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.TriggerEvent
         customNames:
         - 
@@ -614,12 +728,20 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101010101
-        actionIsOpen: 01010101010001
-        actionStartIndex: 000000000400000006000000090000000b0000001200000019000000
-        actionHashCodes: 5e69bb045ac8520411ab5a025ac852045552ad05ca51e9009c512400
+        - 
+        - 
+        actionEnabled: 010101010101010101
+        actionIsOpen: 010101010101000101
+        actionStartIndex: 00000000040000000a0000000c0000000f00000011000000180000001f00000024000000
+        actionHashCodes: 5e69bb04ca51e9005ac8520411ab5a025ac852045552ad05ca51e9009c5124009c512400
         unityObjectParams: []
         fsmGameObjectParams:
+        - useVariable: 1
+          name: Most_Recent_Chien
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         - useVariable: 1
           name: Most_Recent_Chien
           tooltip: 
@@ -651,6 +773,14 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 439418009820631233}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 821500481471472231}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -959,6 +1089,12 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: Resume
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: SetDestination
         - useVariable: 0
           name: 
@@ -966,7 +1102,20 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: Chien
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Chien
         fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.AI.NavMeshAgent
+          value: {fileID: 4976126690011784470}
         - useVariable: 0
           name: 
           tooltip: 
@@ -982,6 +1131,30 @@ MonoBehaviour:
           typeName: UnityEngine.AI.NavMeshAgent
           value: {fileID: 4976126690011784470}
         fsmVarParams:
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         - variableName: Player_Position
           objectType: UnityEngine.Object
           useVariable: 1
@@ -1079,18 +1252,26 @@ MonoBehaviour:
         stringParams:
         - FOLLOWING_PLAYER
         - Trigger_With_Chien
-        byteData: 0000000000000001010000000000
-        arrayParamSizes: 01000000
+        - Trigger_With_Chien
+        byteData: 0000000000000000000101000000000000000000
+        arrayParamSizes: 0000000001000000
         arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000170000000f0000000100000024000000010000001400000010000000200000002400000001000000140000001c0000000f0000000f0000000f000000070000000100000018000000120000000c000000270000002700000001000000010000001400000007000000120000001700000013000000
+        paramDataType: 1f000000170000000f0000000100000018000000120000000c00000027000000010000000100000024000000010000001400000010000000200000002400000001000000140000001c0000000f0000000f0000000f000000070000000100000018000000120000000c0000002700000027000000010000000100000014000000070000001200000017000000130000001400000007000000120000001700000013000000
         paramName:
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
+        - everyFrame
+        - manualUI
         - targetProperty
         - everyFrame
         - gameObject
@@ -1117,8 +1298,13 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 00000000000000000000000000000000000000000100000000000000000000000000000001000000020000000100000000000000010000000200000003000000030000000700000001000000000000000000000000000000010000000800000009000000020000000a000000010000000100000000000000
-        paramByteDataSize: 000000000000000000000000010000000000000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000001000000010000000000000004000000000000000000000000000000
+        - gameObject
+        - trigger
+        - collideTag
+        - sendEvent
+        - storeCollider
+        paramDataPos: 00000000000000000000000000000000000000000000000000000000000000000100000002000000000000000300000000000000000000000100000001000000040000000100000000000000010000000200000003000000050000000900000002000000010000000100000001000000020000000a0000000b000000020000000c0000000200000001000000000000000300000010000000030000000200000001000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000010000000100000000000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000004000000010000000000000000000000000000000000000000000000010000000100000000000000040000000000000000000000000000000000000004000000000000000000000000000000
     - name: Heaven's Door
       description: 
       colorIndex: 6
@@ -2306,6 +2492,19 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &7899207693172315120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821500481471472231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs: []
 --- !u!1 &1732023901173971345
 GameObject:
   m_ObjectHideFlags: 0
